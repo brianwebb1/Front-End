@@ -1,0 +1,912 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    width: 100%;
+    /* max-width: 100%; */
+    
+}
+body::-webkit-scrollbar {
+    width: 9px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+    height: 265px;
+    background-color: darkgrey;
+    outline: 1px solid rgb(120, 148, 177);
+    border-radius: 15px;
+}
+button{
+    transition: 0.3s ease-in-out;
+    
+}
+button:hover{
+    color: salmon !important;
+}
+.navigator{
+    width: 165px; 
+    height: 205px; 
+    position: fixed;
+    top: 50%;left: 91%;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 1669px) {
+    .navigator{
+        left: 89%;
+    }
+}
+@media screen and (max-width: 1455px) {
+    .navigator{
+        left: 88%;
+    }
+}
+@media screen and (max-width: 1461px) {
+    .navigator{
+        left: 86%;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .navigator{
+        left: 84%;
+    }
+}
+@media screen and (max-width: 940px) { 
+    .navigator{
+        left: 82%;
+    }
+}
+.navigator .navBox{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0px;
+}
+@media screen and (max-width: 898px) {
+    .navigator{
+        left: 81%;
+    }
+}
+            .navBox button{
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                border: solid 3px dodgerblue;
+                margin: 0 10px;
+            }
+            .navBox span{
+                font-size: 17px;
+                color: black;
+                font-family: sans-serif;
+                font-weight: 600;
+                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.2s ease-in-out;
+            }
+            .navBox:hover span{
+                visibility: visible;
+                opacity: 1;
+                pointer-events: all;
+            }
+#__Header{
+    position: fixed;
+    z-index: 555;
+    width: 100%;
+    min-width: 1221px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    transition: 0.4s ease-in-out;
+}
+    #__Header .header_body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 215px 0 45px;
+    }
+        #__Header .header_body .container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+                                .container .__Logo{
+                                    background-color: #14B45C;
+                                    width: 48px;
+                                    height: 34px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 10px;
+                                }
+                                .container .__Logo svg{
+                                    width: 25px;
+                                    height: 25px;
+                                }
+                                .container .__Loto_Title{
+                                    color: white;
+                                    font-family: sans-serif;
+                                    margin: 0 10px;
+                                    font-size: 24px;
+                                }
+                                #navigation{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                                #navigation > ul{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                }
+                                #navigation > ul > li{
+                                    padding: 0 18px;
+                                    list-style: none;
+                                    display: flex;
+                                    align-items: center;
+                                    cursor: pointer;
+                                }
+                                .__arrow{
+                                    border-left: 8px solid transparent;
+                                    border-right: 8px solid transparent;
+                                    border-top: 10px solid white;
+                                    margin: 0 5px;
+                                    transition: 0.4s ease-in-out;
+                                }
+                                #navigation > ul > li a{
+                                    font-family: sans-serif;
+                                    text-decoration: none;
+                                    color: white;
+                                    padding: 10px 0;
+                                    transition: 0.3s ease-in;
+                                }
+                                #navigation > ul > li > a:hover{
+                                    color: #14B45C;
+                                }
+                                .container .getStartedBUtton{
+                                    width: 195px;
+                                    height: 48px;
+                                    background-color: #14B45C;
+                                    color: white;
+                                    font-weight:600;
+                                    font-family: sans-serif;
+                                    font-size: 16px;
+                                    border-radius: 15px;
+                                    text-align: center;
+                                    box-sizing: border-box;
+                                    padding: 6px;
+                                    cursor: pointer;
+                                    outline: none;
+                                    border: none;
+                                }
+                                /* Sub Menu */
+                                .sub_menu{
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 45%;
+                                    pointer-events: none; /* turn off any pointer action */
+                                    visibility: hidden;
+                                    opacity: 0; 
+                                    transition: 0.3s ease-in-out;
+                                    background-color: #14B45C;
+                                    padding: 19px;
+                                    border-radius: 5px;
+                                }
+                                    .sub_menu li{
+                                        list-style-type: none;
+                                        padding: 5px 0;
+                                    } 
+                                .burger__Menu-showHide:hover .sub_menu{
+                                    opacity: 1;
+                                    visibility: visible;
+                                    pointer-events: all;
+                                }
+                                .burger__Menu-showHide:hover .sub_menu li a:hover{
+                                    color: salmon !important;
+                                }
+                                .burger__Menu-showHide:hover .__arrow{
+                                    transform: rotate(180deg);
+                                }
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    #main .Management{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #main .Management .managementBody{
+        display: flex;
+        width: 100%;
+        min-width: 850px;
+        height: 627px;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px  0px 10px 0;
+        background-color: #1F222D;
+        padding: 91px;
+    }
+                    .managementBody .Image{
+                        width: 380px;
+                        height: 553px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .managementBody .Image img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+        .Management .managementBody .__content{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 8%;
+            margin-left: 2%;
+        }
+                    .managementBody .__content .__title p:nth-child(1){
+                        color: white;
+                        font-family: sans-serif;
+                        font-size: 29px;
+                        padding: 26px 0  0 0;
+                    }
+                    .managementBody .__content .__title p:nth-child(2){
+                        color: white;
+                        font-family: sans-serif;
+                        font-size: 29px;
+                        padding:0 0  27px 0;
+                    }
+                    .managementBody .__content .subtitle p{
+                        color: rgba(255, 255, 255, 0.628);
+                        font-family: sans-serif;
+                        font-size: 16px;
+                    }
+                                    .__content .container{
+                                        display: flex;
+                                        align-items: center;
+                                        flex-direction: row;
+                                        margin: 25px 0;
+                                    }
+                                    .__content .container .button{
+                                        margin: 0 25px 0 0;
+                                    }
+                                    .__content .container .button button{
+                                        width: 175px;
+                                        height: 45px;
+                                        border-radius: 15px;
+                                        background-color: #14B45C;
+                                        color: white;
+                                        font-family: sans-serif;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        outline: none;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                    .__content .container .watchVideo{
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                    .__content .container .watchVideo svg{
+                                        width: 30px;
+                                        height: 30px;
+                                        fill: white;
+                                        cursor: pointer;
+                                        transition: 0.4s ease-out;
+                                    }
+                                    .__content .container .watchVideo svg:hover{
+                                        fill: #14B45C;
+                                    }
+                                    .__content .container .watchVideo span{
+                                        padding:  0 0 0 15px;
+                                        font-family: sans-serif;
+                                        font-size: 17px;
+                                        font-weight: 600;
+                                        color: white;
+                                    }
+                #details{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                #details .details__body{
+                    width: 100%;
+                    min-width: 1076px;
+                    height: 100%;
+                    margin: 102px 0 0 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                            .details__body .__title{
+                                margin: 0 auto;
+                                font-family: sans-serif;
+                                font-size: 47px;
+                                font-weight: 100;
+                                padding: 15px 0 55px 0;
+                            }
+                            .details__body .information{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                flex-direction: row;
+                            }        
+                                            .information .container{
+                                                display: flex;
+                                                align-items: center;
+                                                flex-direction: column;
+                                                box-sizing: border-box;
+                                                padding: 16px;
+                                                margin: 55px 0 21px 0;
+                                            }
+                                            .information  .container svg{
+                                                                fill: #14B45C;
+                                                            }
+                                            .information  .container p{
+                                                font-size: 27px;
+                                                padding: 46px 0 15px 0;
+                                                font-family: sans-serif;
+                                                color: #222;
+                                                font-weight: 100;
+                                            }
+                                            .information .container .subTitle{
+                                                display: flex;
+                                                align-items: center;
+                                                text-align: center;
+                                                max-width: 300px;
+                                            }
+                                            .information .container .subTitle p{
+                                                padding: 0;
+                                                font-size: 14px;
+                                                font-family: sans-serif;
+                                                color: rgba(34, 34, 34, 0.482);
+                                            }
+                #ourAPP{
+                    width: 100%;
+                    height: 100%;
+                    background-color: #FCFCFC;
+                    margin: 55px 0;
+                }
+                #ourAPP .ourApp__Body{
+                    width: 100%;
+                    min-width: 1306px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin: 96px 0 0 0;
+                }
+                .ourApp__Body  .containerImageForOurApp {
+                    width: 406px;
+                    height: 656px;
+                }
+                .ourApp__Body  .containerImageForOurApp img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                        .ourApp__Body .contain{
+                            padding: 16px;
+                            box-sizing: border-box;
+                            margin: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        .ourApp__Body .contain .box{
+                            width: 376px;
+                            padding: 16px;
+                            margin: 65px 0;
+                            height: 145px;
+                            display: flex;
+                            flex-direction: column;
+                            background-color: white;
+                            border-radius: 15px;
+                            box-shadow: 0 0 6px 0 rgba(34, 34, 34, 0.03);
+                        }
+                        .contain .buyer{
+                            pointer-events: none;
+                            background-color: transparent !important;
+                            box-shadow: none !important;
+                            color: rgba(34, 34, 34, 0.64);
+                        }
+                        .contain .buyer .content .iconBox{
+                            background-color: rgba(128, 128, 128, 0.1);
+                        }
+                        .contain .buyer .content .iconBox svg{
+                            fill: rgba(128, 128, 128, 0.5);
+                        }
+                        .contain .analytics{
+                            pointer-events: none;
+                            background-color: transparent !important;
+                            box-shadow: none !important;
+                            color: rgba(34, 34, 34, 0.64);
+                        }
+                        .contain .analytics .content .iconBox{
+                            background-color: rgba(128, 128, 128, 0.1);
+                        }
+                        .contain .analytics .content .iconBox svg{
+                            fill: rgba(128, 128, 128, 0.5);
+                        }
+                        .contain .intelligent{
+                            pointer-events: none;
+                            background-color: transparent !important;
+                            box-shadow: none !important;
+                            color: rgba(34, 34, 34, 0.64);
+                        }
+                        .contain .intelligent .content .iconBox{
+                            background-color: rgba(128, 128, 128, 0.1);
+                        }
+                        .contain .intelligent .content .iconBox svg{
+                            fill: rgba(128, 128, 128, 0.5);
+                        }
+                                                .box .content{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    cursor: pointer;
+                                                    padding: 9px;
+                                                }
+                                                    .contain .iconBox{
+                                                        width: 46px;
+                                                        height: 46px;
+                                                        border-radius: 50%;
+                                                        background-color: #14b45c24;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                                    .contain .iconBox svg{
+                                                        fill: #14B45C;
+                                                    }
+                                                    .contain p:nth-child(2){
+                                                        font-family: sans-serif;
+                                                        font-size: 19px;
+                                                        padding: 4px 0 36px 0;
+                                                    }
+                                                    .contain p:nth-child(3){
+                                                        font-family: sans-serif;
+                                                        font-size: 15px;
+                                                        color: rgba(34, 34, 34, 0.507);
+                                                    }
+                                                    #ourAPP ._button{
+                                                        width: 100%;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        margin: 96px 0;
+                                                    }
+                                                    #ourAPP ._button button{
+                                                        width: 195px;
+                                                        height: 48px;
+                                                        background-color: #14B45C;
+                                                        color: white;
+                                                        font-weight:600;
+                                                        font-family: sans-serif;
+                                                        font-size: 16px;
+                                                        border-radius: 15px;
+                                                        text-align: center;
+                                                        box-sizing: border-box;
+                                                        padding: 6px;
+                                                        cursor: pointer;
+                                                        outline: none;
+                                                        border: none;
+                                                    }
+                #business{
+                    width: 100%;
+                    min-width: 1306px;
+                    height: 100%;
+                    margin: 55px 0;
+                }
+                #business .business__body{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                            .business__body .__title{
+                                width: 100%;
+                                text-align: center;
+                            }
+                                        .business__body    .__title .title{
+                                                font-size: 31px;
+                                                font-family: sans-serif;
+                                                color: #222;
+                                                padding: 16px 0;
+                                            }
+                                        .business__body    .__title .subTitle{
+                                            font-family: sans-serif;
+                                            font-size: 18px;
+                                            color: rgba(34, 34, 34, 0.379);
+                                            padding: 0 0 86px 0;
+                                        }
+                            .business__body .business_info{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                flex-direction: row;
+                            }
+                            .business__body .business_info .imageContainer{
+                                width: 406px;
+                                height: 100%;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                box-sizing: border-box;
+                                padding: 19px;
+                            }
+                                                            .imageContainer .__image{
+                                                                width: 100%;
+                                                                height: 146px;
+                                                                border-top-left-radius:25px ;
+                                                                border-top-right-radius: 25px;
+                                                                overflow: hidden;
+                                                                display: block;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                            }
+                                                            .imageContainer .__image img{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                object-fit: cover;
+                                                                transition: 0.3s ease-in-out;
+                                                                cursor: pointer;
+                                                            }
+                                                            .imageContainer .__image img:hover{
+                                                                width: 130%;
+                                                                height: 130%;
+                                                            }
+                                                            .imageContainer .__title{
+                                                                font-family: sans-serif;
+                                                                font-size: 21px;
+                                                                color: #222;
+                                                                padding: 18px 0;
+                                                            }
+                                                            .imageContainer p{
+                                                                font-family: sans-serif;
+                                                                font-size: 14px;
+                                                                color: rgba(34, 34, 34, 0.379);
+                                                                padding: 6px 16px;
+                                                            }
+                            .business__body .business_button{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin:92px 0;
+                            }
+                            .business__body .business_button button{
+                                width: 195px;
+                                height: 48px;
+                                background-color: transparent;
+                                color: white;
+                                font-weight:600;
+                                font-family: sans-serif;
+                                font-size: 16px;
+                                border-radius: 15px;
+                                text-align: center;
+                                box-sizing: border-box;
+                                padding: 6px;
+                                cursor: pointer;
+                                outline: none;
+                                border: solid 1px #222;
+                                border-radius: 15px;
+                                color: #222;
+                            }
+                #userService{
+                    width: 100%;
+                    min-width: 927px;
+                    height: 100%;
+                    margin: 96px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                #userService .userService__body{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 26px 11px;
+                }
+                            .userService__body .info{
+                                width: 1270px;
+                                height: 456px;           
+                                position: relative;
+                            }
+                            .userService__body .info .buttons{
+                                position: absolute;
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                                top: 42%;
+                            }
+                                                    .buttons .leftButton {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        border-radius: 50%;
+                                                        background-color: #FCFCFC;
+                                                        border: solid transparent;
+                                                        box-shadow: 0 0 6px 0 rgba(34, 34, 34, 0.3);
+                                                        cursor: pointer;
+
+                                                    }
+                                                    .buttons .rightButton{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        transform: rotate(180deg);
+                                                        border-radius: 50%;
+                                                        background-color: #FCFCFC;
+                                                        border: solid transparent;
+                                                        cursor: pointer;
+                                                        box-shadow: 0 0 6px 0 rgba(34, 34, 34, 0.3);
+                                                    }
+                            .userService__body .info .content{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                            }
+                            .userService__body .info .content .title{
+                                font-family: sans-serif;
+                                font-size: 31px;
+                                color: #222;
+                                font-weight: 600;
+                            }
+                            .userService__body .info .content .subtitle{
+                                max-width: 750px;
+                                font-family: sans-serif;
+                                font-size: 17px;
+                                color: rgba(34, 34, 34, 0.302);
+                                text-align: center;
+                                padding: 26px;
+                            }
+                            .userService__body .info .content .userInfo{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: row;
+                                margin: 18px 0;
+                            }
+                                                            .userInfo .image{
+                                                                width: 150px;
+                                                                height: 150px;
+                                                                box-shadow:  0 0 6px 0 rgba(34, 34, 34, 0.119);
+                                                                border-radius: 50%;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                overflow: hidden;
+                                                            }
+                                                            .userInfo .image img{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                object-fit: cover;
+                                                                transition: 0.4s ease-in-out;
+                                                            }
+                                                            .userInfo .image img:hover{
+                                                                width: 130%;
+                                                                height: 130%;
+                                                            }
+                            .userService__body .info .content .userInfo .imageTitle{
+                                font-family: sans-serif;
+                                font-size: 21px;
+                                color: black;
+                                padding: 16px 21px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            .userService__body .info .content .userInfo .imageTitle .starIcon svg{
+                                margin: 10px 0;
+                                fill: #222;
+                            }
+                            .imageTitle .starIcon svg:nth-child(1),
+                            .imageTitle .starIcon svg:nth-child(2),
+                            .imageTitle .starIcon svg:nth-child(3){
+                                fill: orange !important;
+                            }
+
+                #getStarted{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 55px;
+                }
+                #getStarted .getStarted__body{
+                    width: 1155px;
+                    min-width: 1055px;
+                    height: 375px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 25px;
+                    background-color: #FCFCFC;
+                    box-shadow: 0 0 6px 0 rgba(34, 34, 34, 0.364);
+                    position: relative;
+                    overflow: hidden;
+                }
+                            .getStarted__body .topBorder{
+                                position: absolute;
+                                top: 0;
+                                border: solid 3px #14B45C;
+                                width: 100%;
+                            }
+                            .getStarted__body .title{
+                                font-family: sans-serif;
+                                font-size: 26px;
+                                color: #222;
+                                font-weight: 400;
+                                padding: 16px 0;
+                            }
+                            .getStarted__body .subtitle{
+                                font-family: sans-serif;
+                                font-size: 16px;
+                                color: #222;
+                                width: 60%;
+                                padding: 15px 55px;
+                                text-align: center;
+                                color: rgba(34, 34, 34, 0.291);
+                            }
+                            .getStarted__body .appButton{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: row;
+                            }
+                            .getStarted__body .appButton .btnContainer{
+                                width: 180px;
+                                margin: 25px 15px;
+                                height: 51px;
+                                border-radius: 10px;
+                                padding:2px;
+                                box-sizing: border-box;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                overflow: hidden;
+                            }
+                                            .appButton .btnContainer img{
+                                                width: 130%;
+                                                height: 100%;
+                                                object-fit: cover;
+                                                cursor: pointer;
+                                            }
+#footer{
+    width: 100%;
+    height: 100%;
+    margin: 85px 0 0 0;
+}
+#footer .footer__Body{
+    width: 100%;
+    min-width: 1496px;
+    height: 674px;
+    background-color: #20232C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+            .footer__Body .footerLogo{
+                display: flex;
+                flex-direction: row;
+            }
+            .footer__Body .footerLogo .__Logo{
+                background-color: #14B45C;
+                width: 48px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+            }
+            .footer__Body .footerLogo .__Loto_Title{
+                color: white;
+                font-family: sans-serif;
+                margin: 0 10px;
+                font-size: 24px;
+            }
+
+#footer .footer__Body .footerNavigation{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+        .footer__Body .footerNavigation .container{
+            margin: 85px 15px;
+            width: 355px;
+            height: 286px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+                                .footerNavigation .container h2{
+                                    color: white;
+                                    font-family: sans-serif;
+                                    font-size: 16px;
+                                    font-weight: 300;
+                                    line-height: -5px;
+                                    padding: 16px 0;
+                                }
+                                .footerNavigation .container P{
+                                    padding: 16px 0;
+                                    color: rgba(255, 255, 255, 0.275);
+                                    font-family: sans-serif;
+                                    font-size: 15px;
+                                }
+        .footer__Body .footerMedia {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer__Body .footerMedia .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 206px ;
+        }
+                        .footerMedia .content p{
+                            font-family: sans-serif;
+                            color: rgba(255, 255, 255, 0.452);
+                            font-size: 15px;
+                            font-weight: 600
+                            ;
+                        }
+                        .footerMedia .svg__Icon svg{
+                            fill: white;
+                            width: 21px;
+                            height: 21px;
+                            margin:  0 8px;
+                            cursor: pointer;
+                        }
