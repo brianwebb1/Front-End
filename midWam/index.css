@@ -1,0 +1,484 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+button{cursor: pointer;}
+body{
+    max-width: 100%;
+    min-width: 1227px;
+    background-color: aliceblue;
+    overflow-x: hidden;
+}
+.buttonDarkTheme{
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid 1px #222;
+}
+.darThemeButtonStyle{
+    border: solid 1px #fcfcfc;
+    color: #fcfcfc;
+}
+.DarkTheme{
+    background-color: #222;
+}
+.DarkTheme  .header .language , .DarkTheme .header .title , .DarkTheme .header .socialMedia svg{
+    color: #fcfcfc;
+    fill: #fcfcfc;
+}
+.DarkTheme #header .header_body {
+    border: solid 1px #fcfcfc;
+}
+.DarkTheme #header .header_body .__menu{
+    border-right:solid 1px #fcfcfc ;
+}
+.DarkTheme #header .header_body .__search input{
+    color: #fcfcfc;
+}
+.DarkTheme #header .header_body .__menu svg , .DarkTheme #header .header_body .__menu span ,.DarkTheme #header .header_body .__search svg ,.DarkTheme #header .header_body .pageBTN{
+    transition: 0s;
+    color: #fcfcfc;
+    fill: #fcfcfc;
+}
+.DarkTheme #pageBody .__betweenContent .circle svg {
+    fill: #fcfcfc;
+}
+.DarkTheme #pageBody .__betweenContent .circle{
+    border: solid 1px #fcfcfc;
+}
+.DarkTheme #pageBody .__betweenContent span  {
+    fill: #fcfcfc;
+    color: #fcfcfc;
+}
+.DarkTheme .statistic .statisticCircle p {
+    color: #fcfcfc;
+}
+.DarkTheme .__columnContent .__title {
+    color: #fcfcfc;
+}
+.DarkTheme .__columnContent .__subTitle {
+color: #fcfcfc;
+}
+.DarkTheme .statistic .statisticCircle .number {
+    color: #fcfcfc;
+}
+.DarkTheme .__footer .button div:nth-child(2) button{
+    background-color: transparent;
+    border-radius: 25px;
+    border: solid 1px #fcfcfc;
+    color: #fcfcfc;
+
+}
+.DarkTheme .__footer .button div:nth-child(2) button:hover{
+    text-decoration: underline solid 1px #fcfcfc;
+}
+.DarkTheme .__footer .voteBTN{
+    border: solid 1px #fcfcfc;
+    border-radius: 25px;
+    color: #fcfcfc;
+}
+.DarkTheme .__footer .voteBTN:hover{
+    text-decoration: solid 1px underline;
+}
+.DarkTheme .__footer .votes .imageContainer{
+    border: solid 1px #fcfcfc;
+}
+.header{
+    width: 100%;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    .header .language{
+        width: 150px;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 26px;
+        font-family: sans-serif;
+        font-size: 17px;
+        text-transform: uppercase;
+        text-decoration: underline solid 1px #222;
+        cursor: pointer;
+    }
+    .header .title{
+        font-size: 17px;
+        font-family: sans-serif;
+    }
+    .header .socialMedia{
+        margin: 0 26px;
+    }
+    .header .socialMedia svg{
+        width: 21px;
+        height: 21px;
+        margin: 0 6px;
+        cursor: pointer;
+    }
+    #header{
+        width: 100%;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        #header .header_body{
+            width: 100%;
+            height: 100%;
+            margin: 0 5px;
+            display: flex;
+            align-items: center;
+            border: solid 1px rgba(34, 34, 34, 0.4);
+            justify-content: space-between;
+        }
+                .header_body .headerBOx{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 6px;
+                }
+                 /* Menu */
+                .header_body .__menu{
+                    width: 155px;
+                    height: 100%;
+                    border-right: solid 1px rgba(34, 34, 34, 0.4);
+                }
+                .header_body .__menu svg{
+                    width: 28px;
+                    height: 28px;
+                    cursor: pointer;
+                }
+                .header_body .__menu span{
+                    cursor: pointer;
+                    font-size: 19px;
+                    font-family: sans-serif;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    padding: 0 0 0 16px;
+                    transition: 0.3s ease-in;
+                }
+                .header_body .__menu span:hover{
+                    text-decoration: underline 1px #222;
+                }
+                /* Search */
+                .header_body .__search form{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 4px 16px;
+                }
+                .header_body .__search form svg{
+                    width: 19px;
+                    height: 19px;
+                    margin: 0 5px;
+                }
+                .header_body .__search form input{
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    font-size: 21px;
+                    font-family: sans-serif;
+                    margin: 0 10px;
+                }
+                .header_body .__search form .btn{
+                    width: 186px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    font-weight: 600;
+                    transition: 0.3s ease-in-out;
+                }
+                .header_body .__search form .btn:hover{
+                    text-decoration: underline solid 1px;
+                    color: rgb(0, 127, 32);
+                }
+                /* submit */
+                .header_body .__submit{
+                    width: 286px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: sans-serif;
+                    background-color: rgb(54, 191, 168);
+                    color: #fcfcfc;
+                    font-size: 17px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: 0.3s ease-out;
+                }
+                .header_body .__submit:hover{
+                    color: rebeccapurple;
+                }
+#pageBody{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;flex-direction: column;
+    overflow: hidden;
+}
+    #pageBody .container{
+        margin: 50px 56px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #pageBody .__betweenContent{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        .container .content{
+            width: 100%;
+            height: 100%;
+        }
+                .container .content span:nth-child(1){
+                    font-family: sans-serif;
+                    font-size: 19px;
+                    padding: 56px 0 56px 56px ;
+                }
+                .container .content span:nth-child(2){
+                    font-family: sans-serif;
+                    font-size: 19px;
+                    padding:  0 0 0 16px;
+                }
+                            .container  .__icon{
+                                display: flex !important;
+                                align-items: center !important;
+                                justify-content: flex-end !important;
+                                padding: 26px;
+                            }
+                                    .__icon .circle{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content:  center;
+                                        width: 36px;
+                                        height: 36px;
+                                        border-radius: 50%;
+                                        border: solid 1px #222;
+                                        cursor: pointer;
+                                        transition: 0.3s ease-in-out;
+                                    }
+                                        .container  .__icon  .circle svg{
+                                            width: 19px;
+                                            height: 19px;
+                                        }
+                                    
+            #pageBody .__columnContent{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+                        .__columnContent .__title{
+                            font-family: sans-serif;
+                            font-size: 29px;
+                            font-weight: 600;
+                        }
+                        .__columnContent .__subTitle{
+                            font-family: sans-serif;
+                            font-size: 19px;
+                            letter-spacing: 0.5px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            padding: 10px 0;
+                        }
+                        .__columnContent .statistic{
+                            width: 100%;
+                            height: 275px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                        }
+                                        .statistic .statisticCircle{
+                                            position: relative;
+                                            width: 190px;
+                                            height: 190px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-direction: column;
+                                        }
+                                        .statistic .statisticCircle svg{
+                                            position: relative;
+                                            width: 150px;
+                                            height: 150px;
+                                            transform: rotate(270deg);
+                                        }
+                                        .statistic .statisticCircle svg circle{
+                                            width: 150px;
+                                            height: 150px;
+                                            fill: none;
+                                            stroke-width: 6;
+                                            stroke: #000;
+                                            transform:  translate(5px , 5px);
+                                            stroke-dasharray: 420;
+                                            stroke-dashoffset: 420;
+                                        }
+                                        .statistic .statisticCircle svg .redColor1{
+                                            stroke-dashoffset: 0;
+                                            stroke: rgba(255, 0, 0, 0.218);
+                                        }
+                                        .statistic .statisticCircle svg .redColor2{
+                                            stroke-dashoffset: 120;
+                                            stroke: rgba(255, 0, 0, 0.8);
+                                        }
+                                        .statistic .statisticCircle svg .yellowColor1{
+                                            stroke-dashoffset: 0;
+                                            stroke: rgba(205, 195, 0, 0.218);
+                                        }
+                                        .statistic .statisticCircle svg .yellowColor2{
+                                            stroke-dashoffset: 150;
+                                            stroke: rgba(205, 195, 0, 0.8);
+                                        }
+                                        .statistic .statisticCircle svg .tealColor1{
+                                            stroke-dashoffset: 0;
+                                            stroke: rgba(0, 167, 205, 0.218);
+                                        }
+                                        .statistic .statisticCircle svg .tealColor2{
+                                            stroke-dashoffset: 90;
+                                            stroke: rgba(0, 186, 228, 0.818);
+                                        }
+                                        .statistic .statisticCircle svg .blueColor1{
+                                            stroke-dashoffset: 0;
+                                            stroke: rgba(0, 132, 255, 0.218)
+                                        }
+                                        .statistic .statisticCircle svg .blueColor2{
+                                            stroke-dashoffset: 90;
+                                            stroke: rgba(0, 132, 255, 0.818);
+                                        }
+                                        .statistic .statisticCircle svg .greenColor1{
+                                            stroke-dashoffset: 0;
+                                            stroke: rgba(0, 255, 64, 0.218)
+                                        }
+                                        .statistic .statisticCircle svg .greenColor2{
+                                            stroke-dashoffset: 140;
+                                            stroke: rgba(0, 255, 64, 0.8)
+                                        }
+                                        .statistic .statisticCircle p{
+                                            font-family: sans-serif;
+                                            font-size: 19px;
+                                            text-transform: uppercase;
+                                        }
+                                        .statistic .statisticCircle .number{
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 36px;
+                                            font-family: sans-serif;
+                                        }
+            #pageBody .__footer{
+                width: 100%;
+                height: 54px !important;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+                        .__footer .button{
+                            width: 100%;
+                            height: 100%;
+                            margin: 0 45px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                        }
+                            .__footer .button div{
+                                margin: 0 8px;
+                                width: 146px;
+                                height: 46px;
+                            }
+                            .__footer .button div:nth-child(1) {
+                                border: dashed red;
+                                padding: 3px 0;
+                            }
+                            
+                            .__footer .button div:nth-child(1) button{
+                                background-color: turquoise;
+                                border-radius: 25px;
+                            }
+                            .__footer .button div:nth-child(1) button:hover{
+                                text-decoration: underline solid 1px #222;
+                            }
+                            .__footer .button div:nth-child(2) button{
+                                background-color: transparent;
+                                border-radius: 25px;
+                                border: solid 1px #222;
+                            }
+                            .__footer .button div:nth-child(2) button:hover{
+                                text-decoration: underline solid 1px #222;
+                            }
+                            .__footer .button div button{
+                                width: 145px;
+                                height: 100%;
+                                border: none;
+                                background-color: transparent;
+                                color: #222;
+                                font-family: sans-serif;
+                                font-size: 16px;
+                            }
+                        .__footer .votes{
+                            height: 100%;
+                            display: flex;
+                            flex-direction: row;
+                        }
+                            .__footer .voteBTN{
+                                width: 165px;
+                                height: 46px;
+                                border-radius: 25px;
+                                outline: none;
+                                background-color: transparent;
+                                border: solid 1px #222;
+                                font-family: sans-serif;
+                                font-size: 19px;
+                                text-align: center;
+                                cursor: pointer;
+                            }
+                            .__footer .voteBTN:hover{
+                                text-decoration: underline solid 1px #222;
+                            }
+                            .__footer .imageContainer{
+                                width: 47px;
+                                overflow: hidden;
+                                height: 47px;
+                                border: solid 1px #222;
+                                border-radius: 40px;
+                                margin: 0 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                            }
+                                .__footer .votes .imageContainer img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    transition: 0.3s ease-in-out;
+                                }
+                                .__footer .votes .imageContainer img:hover{
+                                    width: 120%;
+                                    height: 120%;
+                                }
